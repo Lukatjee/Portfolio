@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <img class="intro-picture" src="{% static 'portfolio/imgs/profile.jpg' %}">
+
+    <hr class="hr"/>
+
+    {% autoescape off %}
+
+    {% for object in intro %}
+
+        <h2 class="intro-txt">{{ object.content }}</h2>
+
+    {% endfor %}
+
+    {% endautoescape %}
+
+    {% autoescape off %}
+
+    {% for post in projects %}
+
+        <div class="card">
+
+            <h2>{{ post.title }}</h2>
+            <hr class="card-hr">
+            <p>{{ post.content }}</p>
+
+        </div>
+
+    {% endfor %}
+
+    {% endautoescape %}
+
+{% endblock content %}

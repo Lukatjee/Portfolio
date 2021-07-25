@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+.card {
+
+    padding: 0 15px 0 15px;
+    margin: 15px auto 0 auto;
+    width: 85%;
+    color: white;
+    transition: 1s;
+    background-color: rgba(64, 64, 64, 0.4);
+    border-radius: 3px;
+
+    box-shadow: 5px 5px #141414;
+
+
+}
+
+.card-hr {
+
+    border-color: rgba(255, 255, 255, 0.3);
+    border-top: 0 solid #fff;
+    border-left: 0 solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+}
+
+.card h2 {
+
+    padding: 15px 0 10px 5px;
+    font-family: 'Bubbler One', Arial, serif;
+    font-size: 32px;
+
+}
+
+.card p {
+
+    margin: 15px 0 15px 5px;
+    font-family: 'Arial', serif;
+    font-weight: lighter;
+    color: #c4c4c4;
+
+}
+
+.card-link {
+
+    color: turquoise;
+    font-size: 14px;
+
+}
+
+.card-link:visited {
+
+    color: turquoise;
+
+}

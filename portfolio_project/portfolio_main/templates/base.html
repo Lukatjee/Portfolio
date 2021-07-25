@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        {% load static %}
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="This is my portfolio. Learn more about me and what I've been doing.">
+
+        <script src="https://kit.fontawesome.com/51025037c0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'portfolio/css/base.css' %}" />
+        <link rel="stylesheet" href="{% static 'portfolio/css/cardviews.css' %}" />
+        <link rel="stylesheet" href="{% static 'portfolio/css/nav_bar.css' %}" />
+        <link rel="stylesheet" href="{% static 'portfolio/css/responsive.css' %}" />
+
+        <script src="{% static 'portfolio/js/script.js' %}"></script>
+
+        <title>Luka's Portfolio</title>
+        <link rel="shortcut icon" type="image/jpg" href="{% static 'portfolio/imgs/favicon.png' %}" />
+
+    </head>
+
+    <body>
+
+        <div class="nav">
+
+            <!-- 'Lukatjee' title on the right of the navigation bar. -->
+
+            <a class="nav-link" href="{% url 'portfolio' %}"><h1 class="nav-title">Lukatjee</h1></a>
+
+            <!-- Navigation menu items, 'Erasmus+' and 'My Portfolio' with font awesome icons. -->
+
+            <ul class="nav-list">
+
+                <a class="nav-link" href="{% url 'erasmus' %}"><li class="nav-list-item nav-list-item-start">
+
+                    <p><i class="fas fa-graduation-cap"></i> Erasmus+</p>
+
+                </li></a>
+
+                <a class="nav-link" href="https://github.com/Lukatjee" target="_blank"><li class="nav-list-item nav-list-item-center">
+
+                    <p><i class="fab fa-github"></i> GitHub</p>
+
+                </li></a>
+
+            </ul>
+
+            <!-- Mobile navbar button to open a different view. -->
+
+            <p class="nav-mobile" onclick="openNav()"><i class="fas fa-chevron-down"></i></p>
+
+        </div>
+
+        <div id="nav-mobile-container" class="nav-mobile-container">
+
+            <div class="nav-mobile-heading">
+
+                <h1 class="nav-title">Lukatjee</h1>
+
+            </div>
+
+            <a class="nav-mobile-item" href="{% url 'portfolio' %}">
+
+                <p><i class="fas fa-door-open"></i> Start</p>
+
+            </a>
+
+            <a class="nav-mobile-item" href="{% url 'erasmus' %}">
+
+                <p><i class="fas fa-graduation-cap"></i> Erasmus+</p>
+
+            </a>
+
+            <a class="nav-mobile-item nav-mobile-item-end" href="https://github.com/Lukatjee" target="_blank">
+
+                <p><i class="fab fa-github fa-lg"></i></i> Github</p>
+
+            </a>
+
+            <div class="nav-mobile-footer">
+
+                <p class="nav-mobile-close" onclick="closeNav()"><i class="fas fa-chevron-up"></i></p>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            {% block content %} {% endblock %}
+
+        </div>
+
+    </body>
+
+</html>
